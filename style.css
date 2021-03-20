@@ -13,7 +13,6 @@ body{
   height: 400px;  
   position: relative;
   perspective: 1000px;
-  
 }
 
 .cover, .back {
