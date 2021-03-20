@@ -25,12 +25,6 @@ body{
   
   box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-   
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
-  display: inherit;
 }
 
 .center{
@@ -51,18 +45,6 @@ body{
   transform: rotatey(-180deg);
 }
 
-/* flip animation */
-
-/* .card-container:hover .cover{
-  transform: rotatey(180deg);
-}
-.card-container:hover .back{
-  transform: rotatey(0deg);
-} */
-
-
-
-
 .title{
   text-align: center;
   font-weight: bold;
@@ -81,10 +63,18 @@ body{
   border-radius: 5px;
   box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
   background-image: linear-gradient( 109.6deg,  rgba(39,142,255,1) 11.2%, rgba(98,113,255,0.78) 100.2% ); 
+  outline: none;
+  text-align: center;
 }
+
+.cover input::placeholder{
+  color: rgb(192, 179, 179);
+  font-weight: lighter;
+}
+
 .cover button{
   display: block;
-  padding: 10px;
+  padding: 12px 20px;
   margin: 35px auto;
   border-radius: 5px;
   border: none;
@@ -99,28 +89,3 @@ body{
 .cover button:active{
   box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
 }
-
-
-/* .F-cover-enter-active, .F-cover-leave-active, .F-back-enter-active, .F-back-leave-active{
-  transition: transform 0.5s ease-in-out;
-  
-}
-
-
-.F-cover-enter-from, .F-cover-leave-to{
-  transform: rotatey(-180deg);
-
-}
-.F-cover-enter-to, .F-cover-leave-from{
-  transform: rotatey(0deg);
-}
-
-
-
-.F-back-enter-from, .F-back-leave-to{
-  transform: rotatey(0deg);
-}
-
-.F-back-enter-to, .F-back-leave-from{
-  transform: rotatey(180deg);
-} */

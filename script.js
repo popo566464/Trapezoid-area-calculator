@@ -10,19 +10,25 @@ const vm = Vue.createApp({
         }
     },
 
-    computed:{},
+    computed:{
+
+    },
 
     methods:{
         calculateAREA(){
             let result = (parseFloat(this.top) + parseFloat(this.buttom))*parseFloat(this.height)/2;
             this.equation = result || 0;
-            console.log(this.cover);
 
             this.isShow = !this.isShow;
             
-            document.getElementById("cover").style.transform = this.isShow? 'rotatey('+0 +'deg)': 'rotatey(' + 180 + 'deg)';
-            document.getElementById("back").style.transform = this.isShow? 'rotatey(' + -180 + 'deg)' :  'rotatey(' + 0 + 'deg)';
-
+            document.getElementById("cover").style.transform = 'rotatey('+180 +'deg)';
+            document.getElementById("back").style.transform = 'rotatey(' + 0 + 'deg)';
+            
+            setTimeout(function(){
+                console.log(this.isShow);
+                document.getElementById("cover").style.transform = 'rotatey('+ 0 +'deg)';
+                document.getElementById("back").style.transform ='rotatey(' + -180 + 'deg)';
+            }, 2000);
         }        
     }
 }).mount("#app");
