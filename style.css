@@ -1,0 +1,126 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, Arial;
+  background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% );
+  text-shadow: 0 .15rem .2rem rgba(0,0,0,.2);
+}
+
+.card-container{
+  width: 300px;
+  height: 400px;  
+  position: relative;
+  perspective: 1000px;
+  
+}
+
+.cover, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease-in-out;
+  
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+   
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  display: inherit;
+}
+
+.center{
+  margin: 50px auto;
+}
+
+#cover{
+  background-image: radial-gradient( circle 597px at 93% 9.8%,  rgba(255,61,89,1) 1.7%, rgba(252,251,44,1) 97% );
+  transform: rotatey(0deg);
+}
+
+#back{
+  background-image: linear-gradient( 109.6deg,  rgba(255,174,0,1) 11.2%, rgba(255,0,0,1) 100.2% );
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  line-height: 400px;
+  transform: rotatey(-180deg);
+}
+
+/* flip animation */
+
+/* .card-container:hover .cover{
+  transform: rotatey(180deg);
+}
+.card-container:hover .back{
+  transform: rotatey(0deg);
+} */
+
+
+
+
+.title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 30px;
+}
+.inarea div{
+  margin: 10px auto; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px; 
+
+}
+.cover input{
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient( 109.6deg,  rgba(39,142,255,1) 11.2%, rgba(98,113,255,0.78) 100.2% ); 
+}
+.cover button{
+  display: block;
+  padding: 10px;
+  margin: 35px auto;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  font-size: 18px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.cover button:active{
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
+}
+
+
+/* .F-cover-enter-active, .F-cover-leave-active, .F-back-enter-active, .F-back-leave-active{
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+
+.F-cover-enter-from, .F-cover-leave-to{
+  transform: rotatey(-180deg);
+
+}
+.F-cover-enter-to, .F-cover-leave-from{
+  transform: rotatey(0deg);
+}
+
+
+
+.F-back-enter-from, .F-back-leave-to{
+  transform: rotatey(0deg);
+}
+
+.F-back-enter-to, .F-back-leave-from{
+  transform: rotatey(180deg);
+} */

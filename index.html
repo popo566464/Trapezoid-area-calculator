@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by weizhi</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div id= "app">
+   
+    <div class ="card-container">
+
+      <transition name = "F-back">
+        <div class = "back" id ="back">
+          <div>
+            梯形面積
+            {{equation}}
+          </div> 
+        </div>
+      </transition>
+
+      <transition name = "F-cover">
+        <div class = "cover" id = "cover">       
+          <div class = "center">
+            <div class = "title">計算梯形面積</div>
+            <div class = "inarea">
+              <div>
+                上底 :
+                <input v-model ="top" type="text" name="" oninput="value=value.replace(/[^\d]/g,'')">
+              </div>
+              <div>
+                下底 :
+                <input v-model ="buttom" type="text" name="" oninput="value=value.replace(/[^\d]/g,'')">
+              </div>
+              <div>
+                高度 :
+                <input v-model ="height" type="text" name="" oninput="value=value.replace(/[^\d]/g,'')">
+              </div>
+            </div>    
+            <button @click = "calculateAREA">計算梯形面積</button>
+        </div>
+      </transition>
+
+    </div>  
+</div>
+
+<!-- partial -->
+  <script src="https://unpkg.com/vue@next"></script>  
+  <script  src="./script.js"></script>
+  
+
+</body>
+</html>
