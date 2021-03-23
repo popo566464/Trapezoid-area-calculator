@@ -6,7 +6,7 @@ const vm = Vue.createApp({
             top: null,
             buttom: null,
             height: null,
-            isShow: true
+            //isShow: true
         }
     },
 
@@ -19,13 +19,13 @@ const vm = Vue.createApp({
             let result = (parseFloat(this.top) + parseFloat(this.buttom))*parseFloat(this.height)/2;
             this.equation = result || 0;
 
-            this.isShow = !this.isShow;
+            //this.isShow = !this.isShow;
             
             document.getElementById("cover").style.transform = 'rotatey('+180 +'deg)';
             document.getElementById("back").style.transform = 'rotatey(' + 0 + 'deg)';
             
             setTimeout(function(){
-                console.log(this.isShow);
+                //console.log(this.isShow);
                 document.getElementById("cover").style.transform = 'rotatey('+ 0 +'deg)';
                 document.getElementById("back").style.transform ='rotatey(' + -180 + 'deg)';
             }, 2000);
