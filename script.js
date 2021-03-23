@@ -17,6 +17,7 @@ const vm = Vue.createApp({
     methods:{
         calculateAREA(){
             let result = (parseFloat(this.top) + parseFloat(this.buttom))*parseFloat(this.height)/2;
+            //let result = (parseFloat(top) + parseFloat(buttom))*parseFloat(height)/2;
             this.equation = result || 0;
 
             //this.isShow = !this.isShow;
